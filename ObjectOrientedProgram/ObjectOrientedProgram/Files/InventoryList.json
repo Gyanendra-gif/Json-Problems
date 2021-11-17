@@ -1,0 +1,53 @@
+{
+  "RiceList": [
+    {
+      "Name": "Basmathi",
+      "Weight": 10,
+      "Price": 1000
+    },
+    {
+      "Name": "Sona Masuri",
+      "Weight": 10,
+      "Price": 150
+    },
+    {
+      "Name": "Jeera",
+      "Weight": 10,
+      "Price": 900
+    }
+  ],
+  "WheatList": [
+    {
+      "Name": "Basmathi",
+      "Weight": 10,
+      "Price": 1000
+    },
+    {
+      "Name": "Sona Masuri",
+      "Weight": 10,
+      "Price": 150
+    },
+    {
+      "Name": "Jeera",
+      "Weight": 10,
+      "Price": 900
+    }
+  ],
+  "PulsesList": [
+    {
+      "Name": "Basmathi",
+      "Weight": 10,
+      "Price": 1000
+    },
+    {
+      "Name": "Sona Masuri",
+      "Weight": 10,
+      "Price": 150
+    },
+    {
+      "Name": "Jeera",
+      "Weight": 10,
+      "Price": 900
+    }
+  ]
+}

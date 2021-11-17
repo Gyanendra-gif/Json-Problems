@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ObjectOrientedProgram
 {
-    class InventoryModel
+    public class InventoryModel
     {
         public string Name { get; set; }
         public string Weight { get; set; }
