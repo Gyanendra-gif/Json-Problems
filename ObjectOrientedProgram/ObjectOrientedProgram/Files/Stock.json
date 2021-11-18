@@ -1,0 +1,17 @@
+[
+  {
+    "StockName": "Microsoft",
+    "NumberOfShare": 20,
+    "PricePerShare": 100
+  },
+  {
+    "StockName": "Apple",
+    "NumberOfShare": 10,
+    "PricePerShare": 100
+  },
+  {
+    "StockName": "Tesla",
+    "NumberOfShare": 30,
+    "PricePerShare": 150
+  }
+]
