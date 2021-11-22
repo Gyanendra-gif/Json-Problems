@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ObjectOrientedProgram
+namespace ObjectOrientedProgram.Classes
 {
-    class StockModel
+    class TransactionModel
     {
-        internal int value;
-
         public string StockName { get; set; }
         public int NumberOfShare { get; set; }
         public int PricePerShare { get; set; }
+        public string TransactionDetails { get; set; }
     }
 }
