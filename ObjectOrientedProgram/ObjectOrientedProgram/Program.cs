@@ -14,7 +14,7 @@ namespace ObjectOrientedProgram
             int choice;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Json Program Press- 1-Inventory Items, 2-Inventory List, 3-Stock Items, 4-Stock Buy,5-Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Json Program Press- 1-Inventory Items, 2-Inventory List, 3-Stock Items, 4-Stock Buy, 5-Stock Sell");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -32,6 +32,10 @@ namespace ObjectOrientedProgram
                         sm.DisplayData(@"E:\GitDemo\OOPS-Problems\ObjectOrientedProgram\ObjectOrientedProgram\Files\Stock.json");
                         break;
                     case 5:
+                        sm.Sell(@"E:\GitDemo\OOPS-Problems\ObjectOrientedProgram\ObjectOrientedProgram\Files\Stock.json", @"E:\GitDemo\OOPS-Problems\ObjectOrientedProgram\ObjectOrientedProgram\Files\Account.json");
+                        sm.DisplayData(@"E:\GitDemo\OOPS-Problems\ObjectOrientedProgram\ObjectOrientedProgram\Files\Stock.json");
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }

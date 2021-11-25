@@ -92,5 +92,43 @@ namespace ObjectOrientedProgram.Classes
             }
            
         }
+        public void Sell(string stockfilepath, string accountfilepath)
+        {
+            try
+            {
+                using (StreamReader reader = new StreamReader(stockfilepath))
+                {
+                    var json = reader.ReadToEnd();
+                    var ItemsToSell = JsonConvert.DeserializeObject<List<StockModel>>(json);
+                    Console.WriteLine("Enter the Number of Stocks to Sell:");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter the Company Name:");
+                    string name = Console.ReadLine();
+                    TransactionModel transactionModel = new TransactionModel();
+                    transactionModel.StockName = name;
+                    foreach (var item in ItemsToSell)
+                    {
+                        if (item.StockName == name)
+                        {
+                            transactionModel.TransactionDetails = DateTime.Now.ToString("dd/mm/yy HH:mm:ss");
+                            transactionModel.PricePerShare -= item.PricePerShare;
+                            transactionModel.NumberOfShare -= num;
+                            item.value = item.NumberOfShare * item.PricePerShare;
+
+                        }
+                        reader.Close();
+                        string transactionNewData = JsonConvert.SerializeObject(stockModels);
+                        Console.WriteLine();
+                        File.WriteAllText(stockfilepath, transactionNewData);
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+        }
     }
 }
